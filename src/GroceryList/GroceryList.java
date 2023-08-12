@@ -13,7 +13,7 @@ public class GroceryList {
     public static void addItems() {
        String product = getProduct();
         if (product.contains(",")) {
-            String[] elements = product.split(", ");
+            String[] elements = product.split(",");
             for (String element : elements) {
                 if (element != null && !element.trim().isEmpty() && !checkItemIsInList(element)) {
                         groceryList.add(element.trim());
@@ -36,7 +36,7 @@ public class GroceryList {
     public static void removeItems() {
         String product = getProduct();
         if (product.contains(",")) {
-            String[] elements = product.split(", ");
+            String[] elements = product.split(",");
             for (String element : elements) {
                 if (element != null && !element.trim().isEmpty() && checkItemIsInList(element)) {
                     groceryList.remove(element.trim());
